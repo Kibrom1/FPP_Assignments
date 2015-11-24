@@ -43,6 +43,11 @@ public class W1L2HomeWork {
 		System.out.println(pennies + " pennies");
 
 	}
+	
+	public static boolean isLeapYear(int year){
+		
+		return (year % 4 == 0) ? true : false;
+	}
 
 	public static void main(String[] args) {
 
@@ -50,6 +55,9 @@ public class W1L2HomeWork {
 		Scanner sc = new Scanner(System.in);
 		double amount = sc.nextDouble();
 		convert(amount);
+		
+		if(isLeapYear(1804))
+			System.out.println("It is leap year");
 	}
 
 }

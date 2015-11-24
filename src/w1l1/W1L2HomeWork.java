@@ -1,6 +1,7 @@
 package w1l1;
 
 import java.util.Scanner;
+import java.lang.Math;
 
 public class W1L2HomeWork {
 
@@ -40,7 +41,7 @@ public class W1L2HomeWork {
 		System.out.println(nickels + " nickels");
 		System.out.println(pennies + " pennies");
 	}
-	
+
 	public static boolean isLeapYear(int year) {
 
 		return (year % 4 == 0) ? true : false;
@@ -60,6 +61,20 @@ public class W1L2HomeWork {
 			return true;
 
 		return false;
+	}
+
+	public static String produceUserName() {
+		System.out.println("Enter First Name:");
+		String firstName;
+		Scanner sc = new Scanner(System.in);
+		firstName = sc.nextLine();
+		System.out.println("Enter last Name:");
+		String lastName;
+		lastName = sc.nextLine();
+
+		int randomNumber = (int) (Math.random() * 1000);
+
+		return firstName.substring(0, 1) + lastName.substring(0, 5) + randomNumber;
 	}
 
 	public static void main(String[] args) {
@@ -82,6 +97,8 @@ public class W1L2HomeWork {
 		} else {
 			System.out.println("The number is not palindrome");
 		}
+
+		System.out.println(produceUserName());
 	}
 
 }

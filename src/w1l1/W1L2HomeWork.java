@@ -6,6 +6,8 @@ public class W1L2HomeWork {
 		
 		System.out.println("This is the first trial");
 		System.out.println("It helps to remove the life!");
+		System.out.println("This is the first trial");
+		System.out.println("It helps to remove the life!");
 	}
 
 }

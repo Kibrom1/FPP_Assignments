@@ -11,17 +11,16 @@ public class Week1Lesson2 {
 					arr[j] = null;
 					dup++;
 				}
-				if(dup > 1){
+				if (dup > 1) {
 					newarlen -= dup;
-					}
+				}
 			}
-			
+
 		}
 		String[] newarray = new String[newarlen];
 		int j = 0;
-		for(int i = 0; i < arr.length -1 ; i++)
-		{
-			if(arr[i] != null){
+		for (int i = 0; i < arr.length - 1; i++) {
+			if (arr[i] != null) {
 				newarray[j] = arr[i];
 				j++;
 			}

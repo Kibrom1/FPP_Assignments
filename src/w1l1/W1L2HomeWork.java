@@ -78,7 +78,7 @@ public class W1L2HomeWork {
 	}
 
 	public static void main(String[] args) {
-
+		System.out.println("Enter an amount, for example, 11.56");
 		System.out.println("Enter an amount, for example, 11.56");
 		Scanner sc = new Scanner(System.in);
 		double amount = sc.nextDouble();

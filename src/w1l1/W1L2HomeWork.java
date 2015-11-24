@@ -20,7 +20,6 @@ public class W1L2HomeWork {
 		if (remainder != 0) {
 			quarters = (int) (remainder / quarter);
 			remainder = remainder % quarter;
-
 		}
 		if (remainder != 0) {
 			dimes = (int) (remainder / dime);
@@ -34,19 +33,33 @@ public class W1L2HomeWork {
 			pennies = (int) (remainder / penny);
 			remainder = remainder % penny;
 		}
-
 		System.out.println("Your amount " + amount + " consists of ");
 		System.out.println(dollars + " dollars");
 		System.out.println(quarters + " quarters");
 		System.out.println(dimes + " dimes");
 		System.out.println(nickels + " nickels");
 		System.out.println(pennies + " pennies");
-
 	}
 	
-	public static boolean isLeapYear(int year){
-		
+	public static boolean isLeapYear(int year) {
+
 		return (year % 4 == 0) ? true : false;
+	}
+
+	public static boolean isPalindrome(int panam) {
+
+		int remainder = panam % 10;
+		int divide = panam / 10;
+		int palim = remainder;
+		while (divide > 0) {
+			remainder = divide % 10;
+			divide = divide / 10;
+			palim = palim * 10 + remainder;
+		}
+		if (palim == panam)
+			return true;
+
+		return false;
 	}
 
 	public static void main(String[] args) {
@@ -55,9 +68,20 @@ public class W1L2HomeWork {
 		Scanner sc = new Scanner(System.in);
 		double amount = sc.nextDouble();
 		convert(amount);
-		
-		if(isLeapYear(1804))
+
+		if (isLeapYear(1804))
 			System.out.println("It is leap year");
+
+		int panam = sc.nextInt();
+		if (!(9999 < panam && panam < 100000)) {
+			System.out.println("The number should be five digit number");
+			panam = sc.nextInt();
+		}
+		if (isPalindrome(panam)) {
+			System.out.println("The number is Palindrome");
+		} else {
+			System.out.println("The number is not palindrome");
+		}
 	}
 
 }

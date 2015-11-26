@@ -1,5 +1,7 @@
 package week1lesson2;
 
+import sun.nio.cs.ext.MacArabic;
+
 public class Week1Lesson2 {
 
 	public static void RemoveDups(String[] arr) {
